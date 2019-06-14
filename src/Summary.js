@@ -5,7 +5,7 @@ export default class Summary extends Component {
         return (
             <React.Fragment>
                 <section className="content">
-                <h2>Carbon Intensity (National, United Kingdom)</h2>
+                <h1>Carbon Intensity (National, United Kingdom)</h1>
                 <hr></hr>
                 
                 <h3>Summary</h3>

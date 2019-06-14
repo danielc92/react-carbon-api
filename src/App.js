@@ -4,7 +4,6 @@ import Factor from './Factor';
 import Intensity from './Intensity';
 import Summary from './Summary';
 
-
 const url = 'https://api.carbonintensity.org.uk/intensity';
 const url2 ='https://api.carbonintensity.org.uk/intensity/factors';
 
