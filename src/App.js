@@ -3,6 +3,8 @@ import axios from 'axios';
 import Factor from './Factor';
 import Intensity from './Intensity';
 import Summary from './Summary';
+import Generation from './Generation';
+
 
 const intensity_url = 'https://api.carbonintensity.org.uk/intensity';
 const factors_url ='https://api.carbonintensity.org.uk/intensity/factors';
@@ -21,8 +23,6 @@ export default class App extends Component {
     axios.get(intensity_url)
     .then(
       response => {
-        console.log('Intensity');
-        console.log(response.data);
         this.setState({intensity: response.data.data});
       }
     )
@@ -35,8 +35,6 @@ export default class App extends Component {
     axios.get(factors_url)
     .then(
       response => {
-        console.log('Factors');
-        console.log(response.data);
         this.setState({intensity_factors: response.data.data});
       }
     )
@@ -49,9 +47,8 @@ export default class App extends Component {
     axios.get(generation_url)
     .then(
       response => {
-        console.log('Generation');
-        console.log(response.data);
-        this.setState({generation: response.data.data});
+        console.log(response.data.data.generationmix);
+        this.setState({generation: response.data.data.generationmix});
       }
     )
     .catch(
@@ -70,7 +67,7 @@ export default class App extends Component {
             <Summary/>
             <Intensity intensity={this.state.intensity}/>
             <Factor intensity_factors={this.state.intensity_factors}/>
-            <Generation generation={this.state.generaetion}/>
+            <Generation generation={this.state.generation}/>
           </section>
         </section>
     )
