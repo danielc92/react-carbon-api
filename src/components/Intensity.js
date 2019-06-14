@@ -8,7 +8,7 @@ export default class Intensity extends Component {
         <section className="content">
             <div className="columns is-vcentered">
                 <div className="column">
-                <h4>Intensity</h4>
+                <h3>Intensity</h3>
                 <p className="customcode help">Data available via the /intensity route</p>
             <hr></hr>
             {this.props.intensity.map(item => {return(
@@ -44,6 +44,9 @@ export default class Intensity extends Component {
                 </div>
                 <div className="column">
                     <img src={svg_source} alt=""/>
+
+                    <canvas id="myChart"></canvas>
+
                 </div>
             </div>
         </section>

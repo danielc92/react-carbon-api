@@ -12,7 +12,7 @@ export default class Factor extends Component {
                 <img src={svg_source} alt=""/>
                 </section>
                 <section className="column">
-                <h4>Intensity Factors</h4>
+                <h3>Intensity Factors</h3>
                 <p className="customcode help">Data available via the /intensity/factors route</p>
             <hr></hr>
               {this.props.intensity_factors.map(item => {
