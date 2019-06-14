@@ -6,7 +6,6 @@ export default class Factor extends Component {
            <React.Fragment>
             <h5>Intensity Factors (/intensity/factors)</h5>
             <hr></hr>
-            <section className="columns is-multiline">
               {this.state.intensity_factors.map(item => {
                 return <table className="table is-striped">
                   <thead>

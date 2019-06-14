@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios';
 import Factor from './Factor';
-import Intensity from '/Intensity';
+import Intensity from './Intensity';
 import Summary from './Summary';
 
 
@@ -40,9 +40,9 @@ export default class App extends Component {
     return (
       <section className="section">
         <section className="container">
-            <Summwary/>
-            <Intensity/>
-            <Factor/>
+            <Summary/>
+            <Intensity intensity={this.state.intensity}/>
+            <Factor intensity_factors={this.state.intensity_factors}/>
           </section>
         </section>
     )
