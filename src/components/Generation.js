@@ -7,7 +7,7 @@ export default class Generation extends Component {
         return (
         <section className="content">
             <h3>Generation Mix</h3>
-            <p className="customcode">Data available via the /generation route</p>
+            <p className="customcode help">Data available via the /generation route</p>
             <section className="columns">
                 <section className="column">
                     <table className="table is-striped">
@@ -22,7 +22,7 @@ export default class Generation extends Component {
                                 return (
                                     <tr>
                                         <td>{item['fuel']}</td>
-                                        <td>{item['perc']}</td>
+                                        <td className="customcode">{item['perc']}</td>
                                     </tr>
                                 )
                             })}

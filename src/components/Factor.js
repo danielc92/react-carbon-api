@@ -12,8 +12,8 @@ export default class Factor extends Component {
                 <img src={svg_source} alt=""/>
                 </section>
                 <section className="column">
-                <h5>Intensity Factors</h5>
-                <p className="customcode">Data available via the /intensity/factors route</p>
+                <h4>Intensity Factors</h4>
+                <p className="customcode help">Data available via the /intensity/factors route</p>
             <hr></hr>
               {this.props.intensity_factors.map(item => {
                 return <table className="table is-striped">
@@ -28,7 +28,7 @@ export default class Factor extends Component {
                     return(
                       <tr>
                       <td>{entry[0]}</td>
-                      <td>{entry[1]}</td>
+                      <td className="customcode">{entry[1]}</td>
                     </tr>
                       )
                   })}

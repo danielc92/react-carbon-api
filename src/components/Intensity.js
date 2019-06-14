@@ -8,8 +8,8 @@ export default class Intensity extends Component {
         <section className="content">
             <div className="columns is-vcentered">
                 <div className="column">
-                <h5>Intensity</h5>
-                <p className="customcode">Data available via the /intensity route</p>
+                <h4>Intensity</h4>
+                <p className="customcode help">Data available via the /intensity route</p>
             <hr></hr>
             {this.props.intensity.map(item => {return(
             <React.Fragment>
@@ -23,17 +23,17 @@ export default class Intensity extends Component {
                     <tbody>
                         <tr>
                             <td>Date (from)</td>
-                            <td>{item['from']}</td>
+                            <td className="customcode">{item['from']}</td>
                         </tr>
                         <tr>
                             <td>Date (to)</td>
-                            <td>{item['to']}</td>
+                            <td className="customcode">{item['to']}</td>
                         </tr>
                         {Object.entries(item['intensity']).map(entry => {
                             return (<React.Fragment>
                                     <tr>
                                         <td>{entry[0]}</td>
-                                        <td>{entry[1]}</td>
+                                        <td className="customcode">{entry[1]}</td>
                                     </tr>
                                     </React.Fragment>)})}
                     </tbody>
