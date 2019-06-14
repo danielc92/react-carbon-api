@@ -4,18 +4,21 @@ import Factor from './Factor';
 import Intensity from './Intensity';
 import Summary from './Summary';
 
-const url = 'https://api.carbonintensity.org.uk/intensity';
-const url2 ='https://api.carbonintensity.org.uk/intensity/factors';
+const intensity_url = 'https://api.carbonintensity.org.uk/intensity';
+const factors_url ='https://api.carbonintensity.org.uk/intensity/factors';
+const generation_url = 'https://api.carbonintensity.org.uk/generation';
+
 
 export default class App extends Component {
 
   state = {
     intensity: [],
-    intensity_factors: []
+    intensity_factors: [],
+    generation: []
   }
 
   componentDidMount() {
-    axios.get(url)
+    axios.get(intensity_url)
     .then(
       response => {
         console.log('Intensity');
@@ -23,8 +26,13 @@ export default class App extends Component {
         this.setState({intensity: response.data.data});
       }
     )
+    .catch(
+      error => {
+        console.log(`An error has occured with the intensity call ${error}`);
+      }
+    )
     
-    axios.get(url2)
+    axios.get(factors_url)
     .then(
       response => {
         console.log('Factors');
@@ -32,6 +40,26 @@ export default class App extends Component {
         this.setState({intensity_factors: response.data.data});
       }
     )
+    .catch(
+      error => {
+        console.log(`An error has occured with the factors call ${error}`);
+      }
+    )
+
+    axios.get(generation_url)
+    .then(
+      response => {
+        console.log('Generation');
+        console.log(response.data);
+        this.setState({generation: response.data.data});
+      }
+    )
+    .catch(
+      error => {
+        console.log(`An error has occured with the generation call ${error}`);
+      }
+    )
+
   }
 
   render() {
@@ -42,6 +70,7 @@ export default class App extends Component {
             <Summary/>
             <Intensity intensity={this.state.intensity}/>
             <Factor intensity_factors={this.state.intensity_factors}/>
+            <Generation generation={this.state.generaetion}/>
           </section>
         </section>
     )
