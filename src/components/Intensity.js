@@ -8,7 +8,8 @@ export default class Intensity extends Component {
         <section className="content">
             <div className="columns is-vcentered">
                 <div className="column">
-                <h5>Intensity (/intensity)</h5>
+                <h5>Intensity</h5>
+                <p className="customcode">Data available via the /intensity route</p>
             <hr></hr>
             {this.props.intensity.map(item => {return(
             <React.Fragment>
