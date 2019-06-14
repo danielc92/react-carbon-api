@@ -35,9 +35,16 @@ export default class App extends Component {
   render() {
 
     return (
-      <div>
-          <h1>Hello World</h1>  
-      </div>
+      <section className="section">
+        <section className="container">
+        <section className="content">
+          <h3>Carbon Intensity UK</h3>
+
+        </section>
+
+        </section>
+
+      </section>
     )
   }
 }
