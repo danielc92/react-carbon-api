@@ -1,26 +1,44 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import axios from 'axios';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+const url = 'https://api.carbonintensity.org.uk/intensity';
+const url2 ='https://api.carbonintensity.org.uk/intensity/factors';
+
+export default class App extends Component {
+
+  state = {
+    intensity: [],
+    intensity_factors: []
+  }
+
+  componentDidMount() {
+    axios.get(url)
+    .then(
+      response => {
+        console.log('Intensity');
+        console.log(response.data);
+        this.setState({intensity: response.data});
+      }
+    )
+    
+    axios.get(url2)
+    .then(
+      response => {
+        console.log('Factors');
+        console.log(response.data);
+        this.setState({intensity_factors: response.data});
+      }
+    )
+  }
+
+  render() {
+
+    return (
+      <div>
+          <h1>Hello World</h1>  
+      </div>
+    )
+  }
 }
 
-export default App;
