@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.js": "/react-carbon-api/static/js/main.5bc91b38.chunk.js",
+    "main.js.map": "/react-carbon-api/static/js/main.5bc91b38.chunk.js.map",
+    "runtime~main.js": "/react-carbon-api/static/js/runtime~main.2d72c6c3.js",
+    "runtime~main.js.map": "/react-carbon-api/static/js/runtime~main.2d72c6c3.js.map",
+    "static/js/2.cfd35f24.chunk.js": "/react-carbon-api/static/js/2.cfd35f24.chunk.js",
+    "static/js/2.cfd35f24.chunk.js.map": "/react-carbon-api/static/js/2.cfd35f24.chunk.js.map",
+    "index.html": "/react-carbon-api/index.html",
+    "precache-manifest.005ebd5162a1237ce887d488bb4e4648.js": "/react-carbon-api/precache-manifest.005ebd5162a1237ce887d488bb4e4648.js",
+    "service-worker.js": "/react-carbon-api/service-worker.js",
+    "static/media/undraw_metrics_gtu7.svg": "/react-carbon-api/static/media/undraw_metrics_gtu7.6231c5fb.svg"
+  }
+}
