@@ -4,9 +4,11 @@ export default class Factor extends Component {
     render() {
         return (
            <React.Fragment>
+
+            <section className="content">
             <h5>Intensity Factors (/intensity/factors)</h5>
             <hr></hr>
-              {this.state.intensity_factors.map(item => {
+              {this.props.intensity_factors.map(item => {
                 return <table className="table is-striped">
                   <thead>
                     
@@ -28,6 +30,7 @@ export default class Factor extends Component {
                 </table>
           
               })}
+              </section>
            </React.Fragment>
         )
     }
