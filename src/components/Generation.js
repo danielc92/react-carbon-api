@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import svg_source from './images/undraw_metrics_gtu7.svg';
+
 
 export default class Generation extends Component {
     render() {
@@ -27,7 +29,7 @@ export default class Generation extends Component {
                     </table>
                 </section>
                 <section className="column">
-                    <code>Filler</code>
+                   <img src={svg_source} alt=""/>
                 </section>
             </section>
         </section>

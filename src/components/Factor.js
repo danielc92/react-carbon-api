@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import svg_source from '../images/undraw_metrics_gtu7.svg';
 
 export default class Factor extends Component {
     render() {
@@ -6,12 +7,16 @@ export default class Factor extends Component {
            <React.Fragment>
 
             <section className="content">
-            <h5>Intensity Factors (/intensity/factors)</h5>
+              <section className="columns  is-vcentered">
+                <section className="column">
+                <img src={svg_source} alt=""/>
+                </section>
+                <section className="column">
+                <h5>Intensity Factors (/intensity/factors)</h5>
             <hr></hr>
               {this.props.intensity_factors.map(item => {
                 return <table className="table is-striped">
                   <thead>
-                    
                     <tr>
                       <th>Factor</th>
                       <th>Value</th>
@@ -30,6 +35,9 @@ export default class Factor extends Component {
                 </table>
           
               })}
+                </section>
+              </section>
+            
               </section>
            </React.Fragment>
         )

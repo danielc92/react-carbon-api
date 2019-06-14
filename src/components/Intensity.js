@@ -6,7 +6,7 @@ export default class Intensity extends Component {
     render() {
         return (
         <section className="content">
-            <div className="columns">
+            <div className="columns is-vcentered">
                 <div className="column">
                 <h5>Intensity (/intensity)</h5>
             <hr></hr>

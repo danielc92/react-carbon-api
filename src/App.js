@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import axios from 'axios';
-import Factor from './Factor';
-import Intensity from './Intensity';
-import Summary from './Summary';
-import Generation from './Generation';
-import Footer from './Footer';
+import Factor from './components/Factor';
+import Intensity from './components/Intensity';
+import Summary from './components/Summary';
+import Generation from './components/Generation';
+import Footer from './components/Footer';
 
 
 const intensity_url = 'https://api.carbonintensity.org.uk/intensity';
