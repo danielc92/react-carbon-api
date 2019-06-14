@@ -4,6 +4,7 @@ import Factor from './Factor';
 import Intensity from './Intensity';
 import Summary from './Summary';
 import Generation from './Generation';
+import Footer from './Footer';
 
 
 const intensity_url = 'https://api.carbonintensity.org.uk/intensity';
@@ -62,14 +63,18 @@ export default class App extends Component {
   render() {
 
     return (
-      <section className="section">
-        <section className="container">
-            <Summary/>
-            <Intensity intensity={this.state.intensity}/>
-            <Factor intensity_factors={this.state.intensity_factors}/>
-            <Generation generation={this.state.generation}/>
-          </section>
-        </section>
+      <React.Fragment>
+          <section className="section">
+            <section className="container">
+                <Summary/>
+                <Intensity intensity={this.state.intensity}/>
+                <Factor intensity_factors={this.state.intensity_factors}/>
+                <Generation generation={this.state.generation}/>
+              </section>
+            </section>
+
+            <Footer/>
+        </React.Fragment>
     )
   }
 }

@@ -12,7 +12,7 @@ export default class Intensity extends Component {
             <hr></hr>
             {this.props.intensity.map(item => {return(
             <React.Fragment>
-                <table class="table is-striped">
+                <table className="table is-striped">
                     <thead>
                         <tr>
                         <th>Attribute</th>
