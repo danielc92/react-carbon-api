@@ -17,7 +17,8 @@ export default class App extends Component {
   state = {
     intensity: [],
     intensity_factors: [],
-    generation: []
+    generation: [],
+    updated: 'Fri Jun 14 2019 15:01:41 GMT+1000 (Australian Eastern Standard Time)'
   }
 
   componentDidMount() {
@@ -66,7 +67,7 @@ export default class App extends Component {
       <React.Fragment>
           <section className="section">
             <section className="container">
-                <Summary/>
+                <Summary updated={this.state.updated}/>
                 <Intensity intensity={this.state.intensity}/>
                 <Factor intensity_factors={this.state.intensity_factors}/>
                 <Generation generation={this.state.generation}/>

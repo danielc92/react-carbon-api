@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import svg_source from './images/undraw_metrics_gtu7.svg';
+import svg_source from '../images/undraw_metrics_gtu7.svg';
 
 
 export default class Intensity extends Component {

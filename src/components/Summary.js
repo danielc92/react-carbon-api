@@ -6,7 +6,12 @@ export default class Summary extends Component {
             <React.Fragment>
                 <section className="content">
                 <h1>Carbon Intensity (National, United Kingdom)</h1>
+                <p className="customcode">Last updated: {this.props.updated}</p>
                 <hr></hr>
+                
+                <p>This React Application will ingest data from the Carbon Intensity API and display it in a report like format. axios library is being used to process the api calls.</p>    
+                
+                
                 
                 <h3>Summary</h3>
                 <hr></hr>

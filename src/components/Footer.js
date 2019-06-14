@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 export default class Footer extends Component {
     render() {
         return (
-            <div className="footer">
+            <div className="footer has-text-centered">
                 <div className="container">
                     <ul>
                         <li><a href="https://carbonintensity.org.uk/">Learn more</a> about the Carbon Intensity API</li>
