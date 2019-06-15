@@ -22,7 +22,7 @@ export default class Generation extends Component {
                 {
                     label: 'Percentage (%)',
                     data: valueData,
-                    backgroundColor: 'rgba(51,153,102,0.7)'
+                    backgroundColor: 'rgba(51,153,102,0.8)'
                 }
             ]
         }
@@ -37,7 +37,6 @@ export default class Generation extends Component {
             <p className="customcode help">Data available via the /generation route</p>
             <section className="columns">
                 <section className="column is-one-quarter">
-                    {this.getData}
                     <table className="table is-striped">
                         <thead>
                             <tr>

@@ -4,12 +4,11 @@ import { Bar } from 'react-chartjs-2';
 export default class Factor extends Component {
 
   getData = () => {
-    let labelData = Object.keys(this.props.intensity_factors);
-    let valueData = Object.values(this.props.intensity_factors);
+    let labelData = [];
+    let valueData = [];
 
-    this.props.intensity_factors.map(item=>{
-      Object.entries(item).map(item=>{
-        console.log('proccessing', item[0])
+    this.props.intensity_factors.map(object=>{
+      Object.entries(object).map(item=>{
         if (item[1] > 0) {
           labelData.push(item[0]);
           valueData.push(item[1]);
@@ -22,13 +21,12 @@ export default class Factor extends Component {
         labels: labelData,
         datasets:[
             {
-                label: 'Percentage (%)',
+                label: 'Intensity (units)',
                 data: valueData,
-                backgroundColor: 'rgba(51,153,102,0.7)'
+                backgroundColor: 'rgba(51,153,102,0.8)'
             }
         ]
     }
-    console.log(data);
     return data;
 }
 
@@ -45,7 +43,7 @@ export default class Factor extends Component {
                              responsive: true,
                              title: {
                                  display: true,
-                                 text: 'Generation Mix Chart'
+                                 text: 'Intensity Factors Chart'
                              },
                              maintainAspectRatio: true, 
                              scales: {
