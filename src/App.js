@@ -6,7 +6,6 @@ import Summary from './components/Summary';
 import Generation from './components/Generation';
 import Footer from './components/Footer';
 
-
 const intensity_url = 'https://api.carbonintensity.org.uk/intensity';
 const factors_url ='https://api.carbonintensity.org.uk/intensity/factors';
 const generation_url = 'https://api.carbonintensity.org.uk/generation';
