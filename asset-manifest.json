@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/react-carbon-api/static/js/main.f54eb1b5.chunk.js",
-    "main.js.map": "/react-carbon-api/static/js/main.f54eb1b5.chunk.js.map",
+    "main.js": "/react-carbon-api/static/js/main.c7bddb30.chunk.js",
+    "main.js.map": "/react-carbon-api/static/js/main.c7bddb30.chunk.js.map",
     "runtime~main.js": "/react-carbon-api/static/js/runtime~main.2d72c6c3.js",
     "runtime~main.js.map": "/react-carbon-api/static/js/runtime~main.2d72c6c3.js.map",
-    "static/js/2.cfd35f24.chunk.js": "/react-carbon-api/static/js/2.cfd35f24.chunk.js",
-    "static/js/2.cfd35f24.chunk.js.map": "/react-carbon-api/static/js/2.cfd35f24.chunk.js.map",
+    "static/js/2.9521d833.chunk.js": "/react-carbon-api/static/js/2.9521d833.chunk.js",
+    "static/js/2.9521d833.chunk.js.map": "/react-carbon-api/static/js/2.9521d833.chunk.js.map",
     "index.html": "/react-carbon-api/index.html",
-    "precache-manifest.f4ed057f4fa6d4dc68742c0d5e4e3505.js": "/react-carbon-api/precache-manifest.f4ed057f4fa6d4dc68742c0d5e4e3505.js",
+    "precache-manifest.e5ad309cbda65c472cfcc717f91048ee.js": "/react-carbon-api/precache-manifest.e5ad309cbda65c472cfcc717f91048ee.js",
     "service-worker.js": "/react-carbon-api/service-worker.js",
     "static/media/undraw_metrics_gtu7.svg": "/react-carbon-api/static/media/undraw_metrics_gtu7.6231c5fb.svg"
   }
