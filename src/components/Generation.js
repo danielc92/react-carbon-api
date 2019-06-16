@@ -46,12 +46,13 @@ export default class Generation extends Component {
                         </thead>
                         <tbody>
                             {this.props.generation.map(item => {
+                                if (item['perc'] > 0) {
                                 return (
                                     <tr key={item['fuel']}>
                                         <td>{item['fuel']}</td>
                                         <td className="customcode">{item['perc']}</td>
                                     </tr>
-                                )
+                                )}
                             })}
                         </tbody>
                     </table>
