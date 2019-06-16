@@ -6,6 +6,8 @@ import Summary from './components/Summary';
 import Generation from './components/Generation';
 import Footer from './components/Footer';
 import Comparison from './components/Comparison';
+import License from './components/License';
+
 
 const intensity_url = 'https://api.carbonintensity.org.uk/intensity';
 const factors_url ='https://api.carbonintensity.org.uk/intensity/factors';
@@ -18,7 +20,7 @@ export default class App extends Component {
     intensity: [],
     intensity_factors: [],
     generation: [],
-    updated: 'Fri Jun 14 2019 15:01:41 GMT+1000 (Australian Eastern Standard Time)'
+    updated: 'Mon Jun 17 2019 09:24:20 GMT+1000 (Australian Eastern Standard Time)'
   }
 
   componentDidMount() {
@@ -72,6 +74,7 @@ export default class App extends Component {
                 <Factor intensity_factors={this.state.intensity_factors}/>
                 <Generation generation={this.state.generation}/>
                 <Comparison/>
+                <License/>
               </section>
             </section>
 
