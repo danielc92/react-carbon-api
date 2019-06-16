@@ -5,6 +5,7 @@ import Intensity from './components/Intensity';
 import Summary from './components/Summary';
 import Generation from './components/Generation';
 import Footer from './components/Footer';
+import Comparison from './components/Comparison';
 
 const intensity_url = 'https://api.carbonintensity.org.uk/intensity';
 const factors_url ='https://api.carbonintensity.org.uk/intensity/factors';
@@ -70,6 +71,7 @@ export default class App extends Component {
                 <Intensity intensity={this.state.intensity}/>
                 <Factor intensity_factors={this.state.intensity_factors}/>
                 <Generation generation={this.state.generation}/>
+                <Comparison/>
               </section>
             </section>
 

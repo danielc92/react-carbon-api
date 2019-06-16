@@ -35,7 +35,7 @@ export default class Factor extends Component {
            <React.Fragment>
 
             <section className="content">
-              <section className="columns  is-vcentered">
+              <section className="columns">
                 <section className="column is-three-quarters">
                 <Bar data={this.getData} 
                         options={
@@ -69,12 +69,13 @@ export default class Factor extends Component {
                   </thead>
                   <tbody>
                   {Object.entries(item).map(entry => { 
-                    return(
-                      <tr>
-                      <td>{entry[0]}</td>
-                      <td className="customcode">{entry[1]}</td>
-                    </tr>
-                      )
+                    if (entry[1] > 0) {
+                        return (
+                          <tr>
+                          <td>{entry[0]}</td>
+                          <td className="customcode">{entry[1]}</td>
+                        </tr>) }
+                    
                   })}
                   </tbody>
                 </table>
