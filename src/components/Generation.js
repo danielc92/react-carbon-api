@@ -33,10 +33,12 @@ export default class Generation extends Component {
     render() {
         return (
         <section className="content">
-            <h3>Generation Mix</h3>
-            <p className="customcode help">Data available via the /generation route</p>
+            
             <section className="columns">
                 <section className="column is-one-quarter">
+                <h3>Generation Mix</h3>
+            <p className="customcode help">Data available via the /generation route. Data with 0 value has been omitted.</p>
+            <hr></hr>
                     <table className="table is-striped">
                         <thead>
                             <tr>

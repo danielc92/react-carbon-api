@@ -44,9 +44,6 @@ export default class Intensity extends Component {
                 </div>
                 <div className="column">
                     <img src={svg_source} alt=""/>
-
-                    <canvas id="myChart"></canvas>
-
                 </div>
             </div>
         </section>

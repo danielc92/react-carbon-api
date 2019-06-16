@@ -15,10 +15,11 @@ export default class Comparison extends Component {
          <h6>Web Based Analytics</h6>
              <ul>
                  <li>Reliant on users browser, typically involves API calls and browser/client-side rendering.</li>
-                 <li>No license fees, this solution in particular uses 100% open source libraries/languages.</li>
+                 <li>No license fees, use of open source libraries, cost effective.</li>
                  <li>Large amount of flexibility in visualization, there are dozens of free frameworks.</li>
                  <li>Requires programming knowledge</li>
                  <li>Code becomes resuable and scalable</li>
+                 <li>Unlimited design flexibility, with availability of CSS/HTML</li>
              </ul>
          </article>
      </div>
@@ -30,6 +31,7 @@ export default class Comparison extends Component {
                  <li>Does not require much programming knowledge</li>
                  <li>Solutions are not reusable and have to be rebuilt</li>
                  <li>Integration with wider range of data sources</li>
+                 <li>Limited in design flexibility by the software</li>
              </ul>
          </article>
      </div>

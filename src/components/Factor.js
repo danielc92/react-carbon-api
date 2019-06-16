@@ -57,7 +57,7 @@ export default class Factor extends Component {
                 </section>
                 <section className="column is-one-quarter">
                 <h3>Intensity Factors</h3>
-                <p className="customcode help">Data available via the /intensity/factors route</p>
+                <p className="customcode help">Data available via the /intensity/factors route. Data with 0 value has been omitted.</p>
             <hr></hr>
               {this.props.intensity_factors.map(item => {
                 return <table className="table is-striped">
