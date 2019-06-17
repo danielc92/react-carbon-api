@@ -21,14 +21,16 @@ export default class TimeSeries extends Component {
                 {
                     label: 'Actual',
                     data: actualData,
-                    borderColor: 'rgba(255,153,102,0.9)',
+                    borderColor: 'rgba(88, 211, 144,0.8)',
+                    backgroundColor: 'rgba(88, 211, 144,0.8)',
                     pointRadius: 0,
                     fill: false
                 },
                 {
                     label: 'Forecast',
                     data: forecastedData,
-                    borderColor: 'rgba(51,153,102,0.9)',
+                    borderColor: 'rgba(147, 35, 153,0.8)', //line colour
+                    backgroundColor: 'rgba(147, 35, 153,0.8)',
                     pointRadius: 0,
                     fill: false
                 },
@@ -59,12 +61,20 @@ export default class TimeSeries extends Component {
                                          {ticks:{
                                                     beginAtZero: true,
                                                     stepSize: 50
-                                                }
+                                                },
+                                        gridLines: {
+                                            color: 'rgba(0,0,0,0.05)'
+
+                                        }
                                         }],
                                     xAxes: [
                                         {ticks:{
                                                 maxTicksLimit: 10
-                                        }}
+                                        },
+                                        gridLines: {
+                                            display: false
+                                        }
+                                    }
                                     ]
                        }}}/>
                     </section>

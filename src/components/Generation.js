@@ -22,7 +22,7 @@ export default class Generation extends Component {
                 {
                     label: 'Percentage (%)',
                     data: valueData,
-                    backgroundColor: 'rgba(51,153,102,0.8)'
+                    backgroundColor: 'rgba(88, 211, 144,0.8)'
                 }
             ]
         }
@@ -69,10 +69,21 @@ export default class Generation extends Component {
                              },
                              maintainAspectRatio: true, 
                              scales: {
+                                 xAxes: [{
+                                    
+                                    gridLines: {
+                                        display: false
+                                    }}]
+                                ,
                                  yAxes: [
-                                     {ticks:{
+                                     {
+                                         ticks:{
                                                 beginAtZero: true,
                                                 stepSize: 15
+                                            },
+                                            gridLines: {
+                                                color: 'rgba(0,0,0,0.05)'
+    
                                             }
                                     }]
                    }}}/>

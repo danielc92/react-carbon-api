@@ -23,7 +23,7 @@ export default class Factor extends Component {
             {
                 label: 'Intensity (units)',
                 data: valueData,
-                backgroundColor: 'rgba(51,153,102,0.8)'
+                backgroundColor: 'rgba(88, 211, 144,0.8)'
             }
         ]
     }
@@ -47,10 +47,19 @@ export default class Factor extends Component {
                              },
                              maintainAspectRatio: true, 
                              scales: {
+                                xAxes: [{   
+                                  gridLines: {
+                                      display: false
+                                  }
+                                 }],
                                  yAxes: [
                                      {ticks:{
                                                 beginAtZero: true,
                                                 stepSize: 200
+                                            },
+                                            gridLines: {
+                                                color: 'rgba(0,0,0,0.05)'
+    
                                             }
                                     }]
                    }}}/>
