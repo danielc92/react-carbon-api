@@ -9,9 +9,15 @@ import Comparison from './components/Comparison';
 import License from './components/License';
 
 
+let toJsonDate;
+let fromJsonDate;
+// The offset in milliseconds for 5 days
+const milliOffset = 5 * 24 * 60 * 60 * 1000;
+
 const intensity_url = 'https://api.carbonintensity.org.uk/intensity';
 const factors_url ='https://api.carbonintensity.org.uk/intensity/factors';
 const generation_url = 'https://api.carbonintensity.org.uk/generation';
+const timeseries_url = `https://api.carbonintensity.org.uk/intensity/${fromJsonDate}/${toJsonDate}`
 
 
 export default class App extends Component {
@@ -60,6 +66,17 @@ export default class App extends Component {
         console.log(`An error has occured with the generation call ${error}`);
       }
     )
+
+    let nowDate = new Date();
+    let nowMilli = nowDate.getTime();
+    let beforeMilli = nowMilli - milliOffset;
+    let oldDate = new Date(beforeMilli);
+
+    toJsonDate = nowDate.toJSON();
+    fromJsonDate = oldDate.toJSON();
+
+    console.log(toJsonDate);
+    console.log(fromJsonDate);
 
   }
 
