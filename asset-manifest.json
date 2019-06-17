@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/react-carbon-api/static/js/main.96e3cd35.chunk.js",
-    "main.js.map": "/react-carbon-api/static/js/main.96e3cd35.chunk.js.map",
+    "main.js": "/react-carbon-api/static/js/main.b12e02f9.chunk.js",
+    "main.js.map": "/react-carbon-api/static/js/main.b12e02f9.chunk.js.map",
     "runtime~main.js": "/react-carbon-api/static/js/runtime~main.2d72c6c3.js",
     "runtime~main.js.map": "/react-carbon-api/static/js/runtime~main.2d72c6c3.js.map",
     "static/js/2.55e8c319.chunk.js": "/react-carbon-api/static/js/2.55e8c319.chunk.js",
     "static/js/2.55e8c319.chunk.js.map": "/react-carbon-api/static/js/2.55e8c319.chunk.js.map",
     "index.html": "/react-carbon-api/index.html",
-    "precache-manifest.f5dcd83adfb0eb260c01f3a82060acff.js": "/react-carbon-api/precache-manifest.f5dcd83adfb0eb260c01f3a82060acff.js",
+    "precache-manifest.44a1623f656ce2bac0b890e1aa32314d.js": "/react-carbon-api/precache-manifest.44a1623f656ce2bac0b890e1aa32314d.js",
     "service-worker.js": "/react-carbon-api/service-worker.js",
     "static/media/undraw_metrics_gtu7.svg": "/react-carbon-api/static/media/undraw_metrics_gtu7.6231c5fb.svg"
   }
