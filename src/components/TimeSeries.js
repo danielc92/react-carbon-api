@@ -44,13 +44,7 @@ export default class TimeSeries extends Component {
             <section className="content">
                 
                 <section className="columns">
-                    <section className="column is-one-quarter">
-                    <h3>Intensity Time Series</h3>
-                <p className="customcode help">Data available via the /intensity/fromDate/toDate/ route.</p>
-                <hr></hr>
-                <p>The following data backtracks approximately 5 days, and includes forecasts and actual figures.</p>
                     
-                    </section>
                     <section className="column is-three-quarters">
                        <Line data={this.getData} 
                             options={
@@ -73,6 +67,14 @@ export default class TimeSeries extends Component {
                                         }}
                                     ]
                        }}}/>
+                    </section>
+
+                    <section className="column is-one-quarter">
+                    <h3>Intensity Time Series</h3>
+                    <p className="customcode help">Data available via the /intensity/fromDate/toDate/ route.</p>
+                    <hr></hr>
+                    <p>The following data backtracks approximately 5 days, and includes forecasts and actual figures.</p>
+                    
                     </section>
                 </section>
             </section>
