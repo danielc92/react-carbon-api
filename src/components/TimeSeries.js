@@ -8,7 +8,35 @@ export default class TimeSeries extends Component {
         let forecastedData = [];
         let actualData = [];
         let labels = [];
-        
+
+        this.props.timeseries.map( item => {
+            labels.push(item['from']);
+            actualData.push(item['intensity']['forecast']);
+            forecastedData.push(item['intensity']['actual']);
+        })
+
+        let data = {
+            labels: labels,
+            datasets:[
+                {
+                    label: 'Actual',
+                    data: actualData,
+                    borderColor: 'rgba(255,153,102,0.9)',
+                    pointRadius: 0,
+                    fill: false
+                },
+                {
+                    label: 'Forecast',
+                    data: forecastedData,
+                    borderColor: 'rgba(51,153,102,0.9)',
+                    pointRadius: 0,
+                    fill: false
+                },
+            ]
+        }
+
+        return data;
+
     }
 
     render() {
@@ -17,28 +45,11 @@ export default class TimeSeries extends Component {
                 
                 <section className="columns">
                     <section className="column is-one-quarter">
-                    <h3>Generation Mix</h3>
-                <p className="customcode help">Data available via the /generation route. Data with 0 value has been omitted.</p>
+                    <h3>Intensity Time Series</h3>
+                <p className="customcode help">Data available via the /intensity/fromDate/toDate/ route.</p>
                 <hr></hr>
-                        <table className="table is-striped">
-                            <thead>
-                                <tr>
-                                    <th>Fuel</th>
-                                    <th>Percent</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {this.props.generation.map(item => {
-                                    if (item['perc'] > 0) {
-                                    return (
-                                        <tr key={item['fuel']}>
-                                            <td>{item['fuel']}</td>
-                                            <td className="customcode">{item['perc']}</td>
-                                        </tr>
-                                    )}
-                                })}
-                            </tbody>
-                        </table>
+                <p>The following data backtracks approximately 5 days, and includes forecasts and actual figures.</p>
+                    
                     </section>
                     <section className="column is-three-quarters">
                        <Line data={this.getData} 
@@ -46,16 +57,21 @@ export default class TimeSeries extends Component {
                                 {
                                  title: {
                                      display: true,
-                                     text: 'Generation Mix Chart'
+                                     text: 'Time Series Chart'
                                  },
                                  maintainAspectRatio: true, 
                                  scales: {
                                      yAxes: [
                                          {ticks:{
                                                     beginAtZero: true,
-                                                    stepSize: 15
+                                                    stepSize: 50
                                                 }
-                                        }]
+                                        }],
+                                    xAxes: [
+                                        {ticks:{
+                                                maxTicksLimit: 10
+                                        }}
+                                    ]
                        }}}/>
                     </section>
                 </section>
