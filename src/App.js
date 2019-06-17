@@ -7,6 +7,7 @@ import Generation from './components/Generation';
 import Footer from './components/Footer';
 import Comparison from './components/Comparison';
 import License from './components/License';
+import TimeSeries from './components/TimeSeries';
 
 
 let toJsonDate;
@@ -17,7 +18,6 @@ const milliOffset = 5 * 24 * 60 * 60 * 1000;
 const intensity_url = 'https://api.carbonintensity.org.uk/intensity';
 const factors_url ='https://api.carbonintensity.org.uk/intensity/factors';
 const generation_url = 'https://api.carbonintensity.org.uk/generation';
-const timeseries_url = `https://api.carbonintensity.org.uk/intensity/${fromJsonDate}/${toJsonDate}`
 
 
 export default class App extends Component {
@@ -26,6 +26,7 @@ export default class App extends Component {
     intensity: [],
     intensity_factors: [],
     generation: [],
+    timeseries: [],
     updated: 'Mon Jun 17 2019 09:24:20 GMT+1000 (Australian Eastern Standard Time)'
   }
 
@@ -72,11 +73,18 @@ export default class App extends Component {
     let beforeMilli = nowMilli - milliOffset;
     let oldDate = new Date(beforeMilli);
 
-    toJsonDate = nowDate.toJSON();
     fromJsonDate = oldDate.toJSON();
+    toJsonDate = nowDate.toJSON();
 
-    console.log(toJsonDate);
-    console.log(fromJsonDate);
+    let timeseries_url = `https://api.carbonintensity.org.uk/intensity/${fromJsonDate}/${toJsonDate}`
+    
+    axios.get(timeseries_url)
+    .then(
+      response => this.setState({timeseries: response.data.data})
+    )
+    .catch(
+      error => console.log(`There was an error retrieving data from the timeseries route ${error}`)
+    )
 
   }
 
@@ -90,6 +98,7 @@ export default class App extends Component {
                 <Intensity intensity={this.state.intensity}/>
                 <Factor intensity_factors={this.state.intensity_factors}/>
                 <Generation generation={this.state.generation}/>
+                <TimeSeries timeseries={this.state.timeseries}/>
                 <Comparison/>
                 <License/>
               </section>
