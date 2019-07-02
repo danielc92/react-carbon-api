@@ -27,7 +27,7 @@ export default class App extends Component {
     intensity_factors: [],
     generation: [],
     timeseries: [],
-    updated: 'Mon Jun 17 2019 09:24:20 GMT+1000 (Australian Eastern Standard Time)'
+    updated: 'Tue Jul 02 2019 14:18:00 GMT+1000 (Australian Eastern Standard Time)'
   }
 
   componentDidMount() {
