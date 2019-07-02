@@ -32,8 +32,8 @@ export default class Factor extends Component {
 
     render() {
         return (
-           <React.Fragment>
-
+           <section className="section">
+ <section className="container">
             <section className="content">
               <section className="columns">
                 <section className="column is-three-quarters">
@@ -94,7 +94,7 @@ export default class Factor extends Component {
               </section>
             
               </section>
-           </React.Fragment>
+              </section></section>
         )
     }
 }

@@ -92,16 +92,16 @@ export default class App extends Component {
 
     return (
       <React.Fragment>
-                <Summary updated={this.state.updated}/>
-                <Introduction/>
-                <Intensity intensity={this.state.intensity}/>
-                <Factor intensity_factors={this.state.intensity_factors}/>
-                <Generation generation={this.state.generation}/>
-                <TimeSeries timeseries={this.state.timeseries}/>
-                <Comparison/>
-                <License/>
-              <Footer/>
-        </React.Fragment>
+          <Summary updated={this.state.updated}/>
+          <Introduction/>
+          <Intensity intensity={this.state.intensity}/>
+          <Factor intensity_factors={this.state.intensity_factors}/>
+          <Generation generation={this.state.generation}/>
+          <TimeSeries timeseries={this.state.timeseries}/>
+          <Comparison/>
+          <License/>
+          <Footer/>
+      </React.Fragment>
     )
   }
 }

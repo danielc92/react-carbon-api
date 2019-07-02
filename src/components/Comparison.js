@@ -3,6 +3,8 @@ import React, { Component } from 'react'
 export default class Comparison extends Component {
     render() {
         return (
+            <section className="section">
+                <section className="container">
             <section className="content">
  <h3>Comparison</h3>
  <hr></hr>
@@ -37,6 +39,8 @@ export default class Comparison extends Component {
      </div>
  
  </div>
+</section>
+</section>
 </section>
         )
     }

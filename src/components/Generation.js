@@ -32,6 +32,8 @@ export default class Generation extends Component {
 
     render() {
         return (
+            <section className="section">
+                <section className="container">
         <section className="content">
             
             <section className="columns">
@@ -89,6 +91,8 @@ export default class Generation extends Component {
                    }}}/>
                 </section>
             </section>
+        </section>
+        </section>
         </section>
         )
     }

@@ -43,8 +43,9 @@ export default class TimeSeries extends Component {
 
     render() {
         return (
-            <section className="content">
-                
+            <section className="section">
+                <section className="container">
+                <section className="content">
                 <section className="columns">
                     
                     <section className="column is-three-quarters">
@@ -88,6 +89,8 @@ export default class TimeSeries extends Component {
                     </section>
                 </section>
             </section>
-            )
+                </section>
+            </section>
+        )
     }
 }

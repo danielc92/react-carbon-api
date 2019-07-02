@@ -5,6 +5,8 @@ import svg_source from '../images/undraw_metrics_gtu7.svg';
 export default class Intensity extends Component {
     render() {
         return (
+            <section className="section"> 
+            <section className="container">
         <section className="content">
             <div className="columns">
                 <div className="column">
@@ -46,6 +48,8 @@ export default class Intensity extends Component {
                     <img src={svg_source} alt=""/>
                 </div>
             </div>
+        </section>
+        </section>
         </section>
         )
     }

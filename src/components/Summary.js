@@ -4,6 +4,7 @@ export default class Summary extends Component {
     render() {
         return (
             <section className="section">
+                <section className="container">
                 <section className="content">
                     <h1>Carbon Intensity National Report (United Kingdom)</h1>
                     <p>By: Daniel Corcoran</p>
@@ -18,6 +19,7 @@ export default class Summary extends Component {
                         <li>Chart.js was used to generate the visualizations.</li>
                         <li>HTML styled with Bulma CSS Framework</li>
                     </ul>
+                </section>
                 </section>
             </section>
         )
