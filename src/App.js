@@ -8,7 +8,7 @@ import Footer from './components/Footer';
 import Comparison from './components/Comparison';
 import License from './components/License';
 import TimeSeries from './components/TimeSeries';
-
+import Introduction from './components/Introduction';
 
 let toJsonDate;
 let fromJsonDate;
@@ -92,19 +92,15 @@ export default class App extends Component {
 
     return (
       <React.Fragment>
-          <section className="section">
-            <section className="container">
                 <Summary updated={this.state.updated}/>
+                <Introduction/>
                 <Intensity intensity={this.state.intensity}/>
                 <Factor intensity_factors={this.state.intensity_factors}/>
                 <Generation generation={this.state.generation}/>
                 <TimeSeries timeseries={this.state.timeseries}/>
                 <Comparison/>
                 <License/>
-              </section>
-            </section>
-
-            <Footer/>
+              <Footer/>
         </React.Fragment>
     )
   }
