@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://danielc92.github.io/react-carbon-api",
   "dependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "chart.js": "^2.8.0",
     "gh-pages": "^2.0.1",
     "react": "^16.8.6",
